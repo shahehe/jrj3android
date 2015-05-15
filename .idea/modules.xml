@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Jrj.iml" filepath="$PROJECT_DIR$/Jrj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../android-common-toolkits/android-common-toolkits.iml" filepath="$PROJECT_DIR$/../android-common-toolkits/android-common-toolkits.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,91 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="pf_bottom_radio_style1">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/textcolor</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:background">@drawable/pf_filelist_bottom_radio_con1</item>
+        <item name="android:drawableTop">@drawable/pf_filelist_bottom_radio_top1</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingTop">5pt</item>
+        <item name="android:paddingBottom">3pt</item>
+        <item name="android:drawablePadding">2pt</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="pf_bottom_radio_style2">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/textcolor</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:background">@drawable/pf_filelist_bottom_radio_bg</item>
+        <item name="android:drawableTop">@drawable/pf_filelist_bottom_radio_top2</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingTop">5pt</item>
+        <item name="android:paddingBottom">3pt</item>
+        <item name="android:drawablePadding">2pt</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="pf_bottom_radio_style3">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/textcolor</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:background">@drawable/pf_filelist_bottom_radio_bg</item>
+        <item name="android:drawableTop">@drawable/pf_filelist_bottom_radio_top3</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingTop">5pt</item>
+        <item name="android:paddingBottom">3pt</item>
+        <item name="android:drawablePadding">2pt</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="pf_bottom_radio_style4">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/textcolor</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:background">@drawable/pf_filelist_bottom_radio_con2</item>
+        <item name="android:drawableTop">@drawable/pf_filelist_bottom_radio_top4</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingTop">5pt</item>
+        <item name="android:paddingBottom">3pt</item>
+        <item name="android:drawablePadding">2pt</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="DialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground"> @android:color/transparent </item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+</resources>

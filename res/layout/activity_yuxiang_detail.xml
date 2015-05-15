@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/detail_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_top_gray_bg" >
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/ic_back_button"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="宇翔图册"
+                android:textColor="@color/text_color_black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/navigationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="位置"
+            android:clickable="true"
+            android:textColor="@color/blue" />
+
+        <!--
+             <ImageButton
+            android:id="@+id/navigationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_navigation" />
+        -->
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detail_top_bar" />
+    <!--
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detail_top_bar"
+        android:background="@drawable/main_background" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/detail_top_bar"
+            android:orientation="vertical"
+            >
+
+            
+
+             <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="Large Text"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/gray" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/community" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="10dp"
+                android:background="@color/gray" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1" >
+
+                <TableRow android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:text="地      址："
+                        android:textColor="@color/standard_color" />
+
+                    <TextView
+                        android:id="@+id/textView01"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:text="层      数："
+                        android:textColor="@color/standard_color" />
+
+                    <TextView
+                        android:id="@+id/textView02"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:text="总建筑面积："
+                        android:textColor="@color/standard_color" />
+
+                    <TextView
+                        android:id="@+id/textView03"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:text="绿化面积："
+                        android:textColor="@color/standard_color" />
+
+                    <TextView
+                        android:id="@+id/textView04"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:text="规划面积："
+                        android:textColor="@color/standard_color" />
+
+                    <TextView
+                        android:id="@+id/textView05"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:text="物业管理"
+                        android:textColor="@color/standard_color" />
+
+                    <TextView
+                        android:id="@+id/textView06"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:text="高      度："
+                        android:textColor="@color/standard_color" />
+
+                    <TextView
+                        android:id="@+id/textView07"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:text="主要功能："
+                        android:textColor="@color/standard_color" />
+
+                    <TextView
+                        android:id="@+id/textView08"
+                        android:textColor="@color/black" />
+                </TableRow>
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/contentTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/standard_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+    -->
+
+</RelativeLayout>

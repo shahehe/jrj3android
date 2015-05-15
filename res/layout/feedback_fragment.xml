@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background"
+    android:fadeScrollbars="true"
+    android:paddingBottom="20dp"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!--
+        <LinearLayout
+            android:id="@+id/superviese1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/titletextview"
+                style="@style/text_label_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/title" />
+
+                  <Spinner
+	              android:id="@+id/categorySpinner"
+	              android:layout_width="match_parent"
+	              android:layout_height="wrap_content"
+	              android:layout_weight="2"
+	              android:entries="@array/report_category_arrays"
+                  android:prompt="@string/report_category_prompt" />
+        </LinearLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/superviese4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="20dip" >
+
+   
+
+                
+                <TextView
+                    android:id="@+id/addtextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addtextview"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/standard_color"
+                    android:textSize="22sp" />
+                <RelativeLayout 
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/box">
+                <ImageButton
+                    android:id="@+id/btn_camera"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="2.20"
+                    android:background="@drawable/icon_camera"
+                    android:scaleType="fitXY" />
+
+                
+
+                <TextView
+                    android:id="@+id/ortextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="4"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="3dip"
+                    android:paddingRight="3dip"
+                    android:paddingTop="0dip"
+                    android:singleLine="true"
+                    android:text="@string/ortextview"
+                    android:textColor="@color/standard_color"
+                    android:textSize="22sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_gallery"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_album"
+                    android:scaleType="fitXY" />
+                </RelativeLayout>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/image_thumb"
+            layout="@layout/imagethumbspace" />
+
+        <LinearLayout
+            android:id="@+id/superviese5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_thumb"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:background="@drawable/bg_phone_text" 
+                android:singleLine="true"
+                android:paddingLeft="3dp"
+                android:paddingRight="0dp"/>
+
+            <EditText
+                android:id="@+id/describeedittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="2"
+                android:ems="10"
+                android:gravity="top"
+                android:background="@drawable/bg_describe"
+                android:hint="@string/describetextview"
+                android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
+                android:scrollbarAlwaysDrawVerticalTrack="true" 
+                android:paddingLeft="3dp"
+                android:paddingRight="0dp"/>
+
+            <Button
+                android:id="@+id/record"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_arm"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/superviese6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/superviese5"
+            android:layout_marginTop="5dip"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <Spinner
+                android:id="@+id/spinner_feedback"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:entries="@array/feedbackQuestion"
+                android:background="@drawable/bg_spinner"
+                android:paddingLeft="3dp"
+                android:paddingRight="0dp"
+                />
+            <CheckBox
+                android:id="@+id/chkbox_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="@string/is_feedback_needed"
+                android:textColor="@color/standard_color"
+                android:button="@drawable/bg_checkbox"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/superviese7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/superviese6"
+            android:layout_marginTop="15dip"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+            <Button
+                android:id="@+id/btn_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_location"
+                android:layout_alignParentLeft="true"
+                 />
+
+            <Button
+                android:id="@+id/putin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_submit"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

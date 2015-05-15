@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background" >
+
+    <RelativeLayout
+        android:id="@+id/phonesuit_general_set_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_top_gray_bg" >
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/ic_back_button"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/account_list_checkall_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:textColor="@color/text_color_black"
+                android:textSize="18sp" 
+                android:singleLine="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/phonesuit_general_set_top_bar">
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+        
+	    <ImageView 
+	        android:id="@+id/travelImage"
+	        android:layout_width="match_parent"
+	        android:layout_height="180dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginBottom="20dp"
+	        android:scaleType="centerCrop"/>
+	    <TextView 
+	        android:id="@+id/travelContent"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        
+	        android:layout_marginRight="5dp"
+	        android:layout_marginLeft="5dp"
+	        android:textColor="@color/black"/>
+	    
+	</LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
