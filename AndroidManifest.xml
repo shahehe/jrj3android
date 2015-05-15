@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gov.jrj"
+    android:versionCode="38"
+    android:versionName="3.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    <!-- 屏幕适配问题 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 百度导航 ：SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 百度导航：来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="gov.bct.jrj.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="gov.bct.jrj.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="HNw3T3WD4Ybmxp0lKmPdFSp2" />
+        <meta-data
+                android:name="com.baidu.lbsapi.API_KEY"
+                android:value="HNw3T3WD4Ybmxp0lKmPdFSp2" />
+        <meta-data
+            android:name="base_url"
+            android:value="http://218.249.192.55/jrj-web/public" />
+        <meta-data
+            android:name="demo_base_url"
+            android:value="http://demo.bctid.com/jrj-web/public" />
+        <meta-data
+            android:name="test_image_url"
+            android:value="http://192.168.1.220/static.bctid.com/s3/" />
+        <meta-data
+            android:name="update_url"
+            android:value="http://demo.bctid.com/jrj-web/public/rest/last-version?type=android" />
+        <meta-data
+            android:name="testupdate_url"
+            android:value="http://192.168.1.212/update.php?package=com.bctid.hkcoupon" />
+        <meta-data
+            android:name="client_id"
+            android:value="21232f297a57a5a743894a0e4a801fc3" />
+        <meta-data
+            android:name="client_secret"
+            android:value="21232f297a57a5a743894a0e4a801fc3" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <activity
+            android:name="gov.bct.jrj.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.StreetProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.AnnonceViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.DetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.TextNewsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.YuXiangActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.YuXiangDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.ServiceInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.BusinessServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.FoodSercurityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.PoliceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.IntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.TravelCultureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.MedicalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.navigator.activity.BNavigatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.BusinessGuideActivity"
+            android:screenOrientation="portrait" />
+        <!--<activity-->
+            <!--android:name="gov.bct.jrj.activity.MapControlDemo"-->
+            <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name="gov.bct.jrj.activity.CustomerListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.TravelListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.CommerceListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.ProductListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.ProductInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.ProcedureList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.Government_Introduction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.PushActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.HealthServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.HealthServiceActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.HealthInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.StartupDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.ShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.ShopDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.HealthInfo2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.ServiceInfoActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.ServiceInfoDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.BankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.CommunityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.CommunityDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.BicycleActvity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.PermissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="gov.bct.jrj.activity.PermissionInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- //声明Activity     2015-4-1 -->
+         <activity
+            android:name="gov.bct.jrj.activity.BaiduActivity"
+            android:screenOrientation="portrait" /> 
+          <activity
+            android:name="gov.bct.jrj.activity.BaiduShopActivity"
+            android:screenOrientation="portrait" />   
+            
+
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name="gov.bct.jrj.receiver.MyPushMessageReceiver" >
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+        <!-- push必须的receviver和service声明 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <!-- push结束 -->
+       
+    </application>
+
+</manifest>
